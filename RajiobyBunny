@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAJIO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/76047cf5ad.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      overflow-x: hidden;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: black !important;
+      font-family: 'Lobster', cursive;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: orange;
+      background-color: black;
+    }
+    header p.lead {
+      font-size: 1.25rem;
+      color: grey;
+    }
+    section h2 {
+      border-bottom: 3px solid #0d6efd;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: #0b5ed7;
+    }
+    .cards-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 40px 20px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+      margin: auto;
+    }
+    .card-1 {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      padding: 15px;
+      height: auto;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-1 img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .card-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      padding-top: 10px;
+    }
+    .card-head {
+      margin: 10px 0 5px;
+      color: #d83a3a;
+      font-family: 'Gill Sans', sans-serif;
+      font-size: 22px;
+    }
+    .card-para {
+      font-size: 17px;
+      color: rgba(29, 23, 37, 0.7);
+      text-align: left;
+      flex-grow: 1;
+    }
+    .card-button {
+      margin-top: 10px;
+      align-self: center;
+      background: black;
+      color: white;
+      padding: 5px 10px;
+      border: 0;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card-1:hover {
+      transform: translateY(-10px);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px;
+    }
+    footer {
+      background-color: #212529 !important;
+    }
+    footer a.nav-link:hover {
+      color: #0d6efd !important;
+    }
+    .btn-outline-success {
+      border-color: #0d6efd;
+      color: #0d6efd;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-success:hover {
+      background-color: #0d6efd;
+      color: white;
+      border-color: #0d6efd;
+    }
+    .hero-container {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">RAJIO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Men">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Women">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Kids">Kids</a></li>
+        <li class="nav-item"><a class="nav-link" href="#HomeKitchen">Home & Kitchen & Electronics</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ReachUs">Reach us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ContactUs">Contact us</a></li>
+      </ul>
+      <form class="d-flex" onsubmit="event.preventDefault(); alert('Search coming soon!');">
+        <input class="form-control me-2" type="search" placeholder="Search..." />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="text-center my-5">
+  <h1>RAJIO by BUNNY</h1>
+  <p class="lead">RAJIO is for every middle-class Families — low cost&high quality Goods to You</p>
+</header>
+
+<!-- Hero -->
+<div class="container mb-5 hero-container">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="https://i.ibb.co/Txj8rgx8/IMG-20250524-184506.jpg" class="d-block w-100" alt="Hero 1"></div>
+      <div class="carousel-item"><img src="https://i.ibb.co/1YFRgqTc/IMG-20250524-202247.jpg" class="d-block w-100" alt="Hero 2"></div>
+      <div class="carousel-item"><img src="https://i.ibb.co/ym5yX7mj/IMG-20250524-192211.jpg" class="d-block w-100" alt="Hero 3"></div>
+      <div class="carousel-item"><img src="https://i.ibb.co/mVH54Vtz/IMG-20250524-201424.jpg" class="d-block w-100" alt="Hero 4"></div>
+      <div class="carousel-item"><img src="https://i.ibb.co/9mcHyLZ9/IMG-20250524-203010.jpg" class="d-block w-100" alt="Hero 5"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Offers -->
+<section class="container mb-5 text-center">
+  <h2>Available Offers</h2>
+  <button class="btn btn-primary m-1">999</button>
+  <button class="btn btn-secondary m-1">499</button>
+  <button class="btn btn-success m-1">299</button>
+  <button class="btn btn-danger m-1">99</button>
+  <button class="btn btn-warning m-1">30%-40%</button>
+  <button class="btn btn-info m-1">50%-60%</button>
+  <button class="btn btn-light m-1">70%-80%</button>
+  <button class="btn btn-dark m-1">85%-90%</button>
+</section>
+
+
+  <!-- MENSection by Bunny -->
+  <section id="Men" class="container mb-5">
+   <i class="fa-solid fa-shirt" style="color: #3d8bff;"></i> <h2>Men</h2>
+     <div class="cards-container">
+      <div class="card-1">
+        <img src="https://i.ibb.co/WWkSDCXL/ES013895-P3-ae5a2d85-a09d-4a5a-be78-7c0a2f35f35c.jpg"/>
+        <div class="card-data">
+          <h1 class="card-head">Top-Wear</h1>
+       <ul class="card-para">
+           <li>Shirts</li>
+           <li>T-shirts</li>
+           <li>Sweatshirts</li>
+           <li>Hoodies</li>
+           <li>Vests</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/dJj01S6x/images-5.jpg">
+        <div class="card-data">
+       <h1 class="card-head">Bottom-Wear</h1>
+          <ul class="card-para">
+           <li> Formal-Pants</li>
+           <li>Trousers-Cargos</li>
+           <li>Chinos</li>
+           <li>Track-pants</li>
+           <li>Shorts</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/dHjzMbR/images-6.jpg" />
+        <div class="card-data">
+  <h1 class="card-head">Grooming-Products</h1>
+       <ul class="card-para">
+           <li>Perfumes</li>
+           <li>Hair-oils</li>
+           <li>Creams</li>
+           <li>Body lotions</li>
+       </ul>   
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Women section by Bunny-->
+  <section id="Women" class="container mb-5">
+    <i class="fa-solid fa-person-dress fa-lg" style="color: #2b6eff;"></i><h2>Women</h2>
+   <div class="cards-container">
+      <div class="card-1">
+        <img src="https://i.ibb.co/5hfmd1X6/images-8.jpg"/>
+        <div class="card-data">
+          <h1 class="card-head">Classic wear</h1>
+       <ul class="card-para">
+           <li>Sarees</li>
+           <li>Half-Sarees</li>
+           <li>Dresses</li>
+           <li>Tops</li>
+           <li>Plazas</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/x8ttn5Ry/images-10.jpg">
+        <div class="card-data">
+       <h1 class="card-head">Modren-Wear</h1>
+          <ul class="card-para">
+           <li> T-shirts</li>
+           <li>Trousers-Cargos</li>
+           <li>Hoodies</li>
+           <li>Track-pants</li>
+           <li>Shorts</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/B0067NJ/images-9.jpg" />
+        <div class="card-data">
+  <h1 class="card-head">Beauty-Products</h1>
+       <ul class="card-para">
+           <li>Face-Creams</li>
+           <li>Hair-oils</li>
+           <li>Perfumes</li>
+           <li>Body-lotions</li>
+           <li>Face-Powders</li>
+       </ul>   
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids by Bunny-->
+  <section id="Kids" class="container mb-5">
+    <i class="fa-solid fa-children fa-lg" style="color: #0088ff;"></i><h2>Kids</h2>
+  <div class="cards-container">
+      <div class="card-1">
+        <img src="https://i.ibb.co/TBjPvPSK/IMG-20250109-WA0021-3.jpg"/>
+        <div class="card-data">
+          <h1 class="card-head">Boys-Wear</h1>
+       <ul class="card-para">
+           <li>Shirts</li>
+           <li>Pants</li>
+           <li>Shoes</li>
+           <li>T-shirts</li>
+           <li>Shorts</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/ksBCDpyg/IMG-20250524-152841.jpg">
+        <div class="card-data">
+       <h1 class="card-head">Girls-Wear</h1>
+          <ul class="card-para">
+           <li>Frocks</li>
+           <li>Dresses</li>
+           <li>T-shirts</li>
+           <li>Trousers & Pants</li>
+           <li>Shorts</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src=" https://i.ibb.co/1WW4qLB/images-11.jpg" />
+        <div class="card-data">
+  <h1 class="card-head">Baby-Products</h1>
+       <ul class="card-para">
+           <li>Baby-Creams</li>
+           <li>Hair-oils</li>
+           <li>Bathing products</li>
+           <li>Body-lotions</li>
+           <li>Feeding </li>
+       </ul>   
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Home & Kitchen & Bunnys by Bunny-->
+  <section id="HomeKitchen" class="container mb-5">
+    <i class="fa-solid fa-house-user fa-lg" style="color: #2b87ff;"></i> <i class="fa-solid fa-kitchen-set fa-lg" style="color: #1f8bff;"></i> <i class="fa-solid fa-mobile-screen-button fa-lg" style="color: #2483ff;"></i><h2>Home & Kitchen & Electronics</h2>
+    <div class="cards-container">
+      <div class="card-1">
+        <img src=" https://i.ibb.co/HL1KbM2f/images-12.jpg"/>
+        <div class="card-data">
+          <h1 class="card-head">Home</h1>
+       <ul class="card-para">
+           <li>Door Curtains</li>
+           <li>Matees</li>
+           <li>Glass-Cleaner</li>
+           <li>Wall-Posters</li>
+           <li>Pooja-Materials</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/GQhtwbgx/images-13.jpg">
+        <div class="card-data">
+       <h1 class="card-head">Kitchen</h1>
+          <ul class="card-para">
+           <li>Boxes&Jars</li>
+           <li>Groceries</li>
+           <li>Plates&Bowls</li>
+           <li>Dish racks</li>
+           <li>Shorts</li>
+       </ul>
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img src="https://i.ibb.co/3Y8jN29k/images-14.jpg " />
+        <div class="card-data">
+  <h1 class="card-head">Electronics</h1>
+       <ul class="card-para">
+           <li>Mobiles</li>
+           <li>Earbuds</li>
+           <li>Powerbanks</li>
+           <li>Adapter&Cables</li>
+           <li>Home appliances</li>
+       </ul>   
+          <button class="card-button">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Reach Us -->
+<section id="ReachUs" class="container mb-5">
+  <i class="fa-solid fa-map-location-dot fa-lg" style="color: #1a81ff;"></i>
+  <h2>Reach Us</h2>
+  <div class="ratio ratio-1x1 mb-3">
+    <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1945671.0056422958!2d83.2625912!3d17.7381035!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3beb000b953a31%3A0xb4f6a7207c81ba39!2sBunny&#39;s%20Home!5e0!3m2!1sen!2sin!4v1748156121493!5m2!1sen!2sin" style="border:0;" allowfullscreen></iframe>
+  </div>
+  <a href="https://goo.gl/maps/egsbowcwMsdMqMT26?g_st=aw">Rajio by Bunny's Home Address</a>
+</section>
+
+<!-- Contact Us -->
+<section id="ContactUs" class="container mb-5">
+    
+  <i class="fa-solid fa-address-card fa-lg" style="color: #3d84ff;"></i>
+  <h2>Contact Us</h2>
+  <h4>Kaligotla Rajesh</h4>
+  <a href="">My Portfolio</a>
+  <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> rajeshkaligotla07@gmail.com</p>
+  <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> 7143143143</p>
+  <p><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong>H/No: 3-445,Bunny's home, Mamidi bandha colony, Puritipenta, Gajapathinagaram,Vizianagaram, Andhra pradesh 535270</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <nav class="nav justify-content-center mb-2">
+      <a class="nav-link text-white" href="#">Home</a>
+      <a class="nav-link text-white" href="#Men">Men</a>
+      <a class="nav-link text-white" href="#Women">Women</a>
+      <a class="nav-link text-white" href="#Kids">Kids</a>
+      <a class="nav-link text-white" href="#HomeKitchen">Home & Kitchen</a>
+      <a class="nav-link text-white" href="#ReachUs">Reach us</a>
+      <a class="nav-link text-white" href="#ContactUs">Contact us</a>
+    </nav>
+    <p class="mb-0">@Rajio2025 — All rights reserved to the Bunny</p>
+    <div class="mt-2">
+      <i class="fa-brands fa-facebook fa-lg mx-1" style="color: #338bff;"></i>
+      <i class="fa-brands fa-linkedin fa-lg mx-1" style="color: #0d82ff;"></i>
+      <i class="fa-brands fa-instagram fa-lg mx-1" style="color: #e1306c;"></i>
+      <i class="fa-brands fa-youtube fa-lg mx-1" style="color: #ff0000;"></i>
+      <i class="fa-brands fa-whatsapp fa-lg mx-1" style="color: #25d366;"></i>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
